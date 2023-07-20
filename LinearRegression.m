@@ -54,9 +54,20 @@ X_test = X(num_train_rows + 1:size(X, 1), :);
 %Learning rate
 learning_rate = 0.01;
 lambda = 1;
-for i = 1:1:1500
+m = length(y);
+iter = 300;
+J_history = zeros(iter, 1);
+for i = 1:1:iter
+    J_history(i) = costFunction(theta, X_train, y_train, lambda);
     theta = grad(theta, X_train, y_train, learning_rate, lambda);
 end
+
+figure; hold on;
+%plotting loss
+plot(1:iter, J_history);
+xlabel('Epochs');
+ylabel('Loss');
+title('Loss over Iter');
 
 cost = costFunction(theta, X_train, y_train, lambda);
 fprintf('Cost after 1500 epochs is %0.2f\n', cost);
