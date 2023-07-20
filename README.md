@@ -9,3 +9,6 @@ Training Loss: 0.46
 
 ## Testing Results
 Test Loss: 0.15
+
+### Loss
+![Data Visualization](https://github.com/AsimWattoo/HouseRentPrediction/assets/51132084/af102ed6-92cd-44e1-8074-898cb7035316)
